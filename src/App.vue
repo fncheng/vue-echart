@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view />
+    <router-view class="router-view" />
   </div>
 </template>
 
@@ -28,5 +28,8 @@
       color: #42b983;
     }
   }
+}
+.router-view {
+  margin: 0 auto;
 }
 </style>
