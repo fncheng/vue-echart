@@ -11,6 +11,9 @@ export default {
     data: {
       type: Array,
     },
+    legend: {
+      type: Object,
+    },
     option: {
       type: Object,
       required: true,
@@ -23,13 +26,10 @@ export default {
   setup(props) {
     const option = reactive(props.option)
     const data = reactive(props.data)
+    option.legend = props.legend
     option.series[0].data = []
     option.series[0].data = props.data
-    option.legend.formatter = (name) => {
-      let legendData = props.data.filter((item) => item.name === name)
-      // console.log('legendData: ', legendData)
-      return name + '  ' + legendData[0].value
-    }
+
     let myChart = null
     onMounted(() => {
       myChart = echarts.init(document.getElementById(props.id))
