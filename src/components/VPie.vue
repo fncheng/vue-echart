@@ -4,7 +4,7 @@
 
 <script>
 import * as echarts from 'echarts'
-import { onMounted, reactive, watch } from '@vue/composition-api'
+import { onMounted, watch } from '@vue/composition-api'
 export default {
   name: 'VPie',
   props: {
@@ -24,9 +24,9 @@ export default {
     },
   },
   setup(props) {
-    const option = reactive(props.option)
-    const data = reactive(props.data)
-    option.legend = props.legend
+    const option = props.option
+    const data = props.data
+    option.legend = Object.assign(option.legend, props.legend)
     option.series[0].data = []
     option.series[0].data = props.data
 
