@@ -1,7 +1,3 @@
-<template>
-  <div :id="id" class="ec-container"></div>
-</template>
-
 <script>
 import * as echarts from 'echarts'
 import { onMounted, watch } from '@vue/composition-api'
@@ -27,7 +23,7 @@ export default {
     const option = props.option
     const data = props.data
     option.legend = Object.assign(option.legend, props.legend)
-    option.series[0].data = []
+    // option.series[0].data = []
     option.series[0].data = props.data
 
     let myChart = null
@@ -38,6 +34,9 @@ export default {
     watch(data, () => {
       myChart.setOption(option)
     })
+  },
+  render() {
+    return <div id={this.id} class="ec-container"></div>
   },
 }
 </script>

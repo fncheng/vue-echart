@@ -1192,7 +1192,7 @@
 
 "@vue/babel-preset-jsx@^1.2.4":
   version "1.2.4"
-  resolved "https://registry.nlark.com/@vue/babel-preset-jsx/download/@vue/babel-preset-jsx-1.2.4.tgz#92fea79db6f13b01e80d3a0099e2924bdcbe4e87"
+  resolved "https://registry.npm.taobao.org/@vue/babel-preset-jsx/download/@vue/babel-preset-jsx-1.2.4.tgz#92fea79db6f13b01e80d3a0099e2924bdcbe4e87"
   integrity sha1-kv6nnbbxOwHoDToAmeKSS9y+Toc=
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.2.1"
