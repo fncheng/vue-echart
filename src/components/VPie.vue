@@ -24,13 +24,14 @@ export default {
     const data = props.data
     option.legend = Object.assign(option.legend, props.legend)
     // option.series[0].data = []
+    /* eslint-disable */
     function getPieLegend() {
       if (
         option.legend.showValue === undefined ||
         option.legend.showValue === true
       ) {
         option.legend.formatter = (name) => {
-          let legendData = props.data.filter((item) => item.name === name)
+          let legendData = data.filter((item) => item.name === name)
           return name + '  ' + legendData[0].value
         }
       }
@@ -49,7 +50,7 @@ export default {
     })
   },
   render() {
-    return <div id={this.id} class="ec-container"></div>
+    return (<div id={this.id} class="ec-container"></div>)
   },
 }
 </script>
